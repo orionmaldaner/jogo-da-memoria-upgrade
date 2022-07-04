@@ -1,0 +1,132 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*height: 100vh;*/
+    display: flex;
+    background: #174a2a;
+    width: 100%;
+}
+
+.memory-play {
+    min-width: 700px;
+    min-height: 655px;
+    margin: auto;
+    padding-top: 5px;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+#btn {
+    padding: 3px 9px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.div-btn {
+    text-align: center;
+}
+
+.div-cadastro {
+    max-height: 160px;
+    
+}
+
+.inicio {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.div-cadastro fieldset legend {
+    padding: 8px;
+}
+
+.punctuationDiv {
+    margin-top: 10px;
+    width: 640px;  
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.title {
+    padding: 100px 0 30px 0;
+
+    color: #f2f2f2;
+    text-align: center;
+}
+
+.punctuation {
+    color: white;
+    font-size: 1.3em;
+    text-align: center;
+    display: none;
+}
+
+.memory-game {
+    width: 530px;
+    height: 560px;
+    margin: auto;
+    display: none;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.memory-card {
+    width: calc(25% - 10px);
+    height: calc(25% - 10px);
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+}
+
+.memory-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: #2a8a4f;
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+.legend {
+    padding: 10px;
+    margin: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+    .memory-game{
+        height: 400px;
+        padding-top: 5px;
+    }
+    .punctuationDiv {
+        margin-top: 0px;
+    }
+}
